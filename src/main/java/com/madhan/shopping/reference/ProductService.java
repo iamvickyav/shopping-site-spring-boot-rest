@@ -1,4 +1,4 @@
-package com.madhan.shopping;
+package com.madhan.shopping.reference;
 
 import org.springframework.stereotype.Service;
 
