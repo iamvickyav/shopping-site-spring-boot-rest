@@ -5,6 +5,7 @@ import com.madhan.shopping.service.ProductInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -24,5 +25,13 @@ public class ProductInfoController {
     public List<ProductResponse> getProductInfo2(@PathVariable("category") String category,
                                                  @PathVariable("price") String price) {
         return productInfoService.getProductByCategory2(category, price);
+    }
+
+    @RequestMapping("/product/info")
+    public List<ProductResponse> getProductInfo3(@RequestParam(value = "category", required = false) String category,
+                                                 @RequestParam(value = "price", required=false, defaultValue = "10000") String price,
+                                                 @RequestParam(value = "brand", required = false) String brand) {
+        System.out.println(price);
+        return productInfoService.getProductByCategory(category);
     }
 }
