@@ -1,6 +1,6 @@
 package com.madhan.shopping.controller;
 
-import com.madhan.shopping.reference.ProductResponse;
+import com.madhan.shopping.dto.ProductResponse;
 import com.madhan.shopping.service.ProductInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,4 +1,4 @@
-package com.madhan.shopping.reference;
+package com.madhan.shopping.dto;
 
 public class ProductResponse {
     private Integer id;

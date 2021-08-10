@@ -1,7 +1,7 @@
 package com.madhan.shopping.controller;
 
 import com.madhan.shopping.CustomerInfo;
-import com.madhan.shopping.reference.ProductResponse;
+import com.madhan.shopping.dto.ProductResponse;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;

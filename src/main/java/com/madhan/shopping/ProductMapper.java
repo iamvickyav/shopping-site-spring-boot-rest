@@ -1,6 +1,6 @@
 package com.madhan.shopping;
 
-import com.madhan.shopping.reference.ProductResponse;
+import com.madhan.shopping.dto.ProductResponse;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
