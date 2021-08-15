@@ -6,6 +6,7 @@ public class ProductResponse {
     private String desc;
     private Double price;
     private String category;
+    private Double warrantyPrice;
 
     public String getCategory() {
         return category;

@@ -6,19 +6,28 @@ import com.madhan.shopping.dto.ProductInfo;
 import com.madhan.shopping.dto.ProductResponse;
 import com.madhan.shopping.dto.ProductUpdateRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@PropertySource("classpath:vicky.properties")
 public class ProductInfoService {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    public List<ProductResponse> getProductByCategory(String category) {
+    @Value("${warranty.price.percentage}")
+    Integer warrantyService;
 
+    @Value("${warranty.coverage.years}")
+    Integer warrantyCoveragePeriod;
+
+    public List<ProductResponse> getProductByCategory(String category) {
+        System.out.println(warrantyService);
         String query = "SELECT * FROM product where category = \"Laptop\"";
         List<ProductResponse> productResponses = jdbcTemplate.query(query, new ProductMapper());
         return productResponses;
